@@ -3,6 +3,7 @@ var suits = ["spades", "hearts", "clubs", "diams"];
         var players = [];
 
         function startDeal() {
+          
             players = [];
             var num = Number(document.getElementById("players").value);
             for (var i = 0; i < num; i++) {
@@ -14,6 +15,7 @@ var suits = ["spades", "hearts", "clubs", "diams"];
         }
 
         function buildCards() {
+         
             var cards = [];
             for (s in suits) {
                 var bgColor = (suits[s] == "hearts" || suits[s] == "diams") ? "red" : "black";
@@ -31,6 +33,7 @@ var suits = ["spades", "hearts", "clubs", "diams"];
         }
 
         function shuffleCards(array) {
+           
             for (var x = array.length - 1; x > 0; x--) {
                 var ii = Math.floor(Math.random() * (x + 1));
                 var temp = array[x];
@@ -41,6 +44,7 @@ var suits = ["spades", "hearts", "clubs", "diams"];
         }
 
         function deal(cards) {
+           
             var num = players.length;
             var output = document.getElementById("output");
             var p = 0;
